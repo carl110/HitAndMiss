@@ -12,13 +12,13 @@ namespace HitAndMiss
 {
     public partial class Form1 : Form
     {
-        int circle1X = 395;
-        int circleyAxis = 70;
-        int circle2X = 455;
-        int circle3X = 515;
+        readonly int circle1X = 395;
+        readonly int circleyAxis = 70;
+        readonly int circle2X = 455;
+        readonly int circle3X = 515;
         int circleNumber = 1;
         int circleLine = 0;
-        int[] circleArray = { 70, 120, 170, 220, 270, 320 };
+        readonly int[] circleArray = { 70, 120, 170, 220, 270, 320 };
         string[] guess = new string[3];
         string[] answer = { "Red", "Green", "Yellow", "Blue", "Black" };
         public Form1()
@@ -135,23 +135,10 @@ namespace HitAndMiss
         {
             ButtonPush(Brushes.Red, "Red");
         }
-        private void btnBlue_Click(object sender, EventArgs e)
-        {
-            ButtonPush(Brushes.Blue, "Blue");
-        }
-        private void btnGreen_Click(object sender, EventArgs e)
-        {
-            ButtonPush(Brushes.Green, "Green");
-        }
-        private void btnYellow_Click(object sender, EventArgs e)
-        {
-            ButtonPush(Brushes.Yellow, "Yellow");
-        }
-
-        private void btnBlack_Click(object sender, EventArgs e)
-        {
-            ButtonPush(Brushes.Black, "Black");
-        }
+        private void btnBlue_Click(object sender, EventArgs e) => ButtonPush(Brushes.Blue, "Blue");
+        private void btnGreen_Click(object sender, EventArgs e) => ButtonPush(Brushes.Green, "Green");
+        private void btnYellow_Click(object sender, EventArgs e) => ButtonPush(Brushes.Yellow, "Yellow");
+        private void btnBlack_Click(object sender, EventArgs e) => ButtonPush(Brushes.Black, "Black");
         private void btnStartGame_Click(object sender, EventArgs e)
         {
             btnStartGame.Dispose();
